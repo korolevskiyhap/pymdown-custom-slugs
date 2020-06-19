@@ -54,7 +54,7 @@ def uslugify_custom(text, sep, cased=NO_CASED, percent_encode=False):
         slug = RE_ASCII_LETTERS.sub(lower, slug)
 
     # Remove non word characters, non spaces, and non dashes, and convert spaces to dashes.
-    slug = RE_SEP.sub(sep, slug)
+    slug = RE_SEP.sub(sep, slug.replace('.', ''))
 
     return quote(slug.encode('utf-8')) if percent_encode else slug
 
@@ -68,7 +68,7 @@ def uslugify_encoded(text, sep):
 def uslugify_cased(text, sep):
     """Unicode slugify cased (keep case) (`utf-8`)."""
 
-    return uslugify_custom(text, sep.replace('.', ''), cased=CASED)
+    return uslugify_custom(text, sep, cased=CASED)
 
 
 def uslugify_cased_encoded(text, sep):
