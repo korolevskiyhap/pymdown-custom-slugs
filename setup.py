@@ -20,7 +20,7 @@ setup(
     name="pymdown-custom-slugs",
     py_modules=["pymdown-custom-slugs"],
     python_requires=">=3.6",
-    version=0.0.1",
+    version="0.0.1",
     url="https://github.com/Stanzilla/pymdown-custom-slugs",
     classifiers=[
         "Programming Language :: Python",
