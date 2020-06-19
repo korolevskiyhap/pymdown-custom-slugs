@@ -1,6 +1,6 @@
 import os
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 def read(fname):
@@ -18,7 +18,7 @@ setup(
     long_description=read("README.md"),
     long_description_content_type="text/markdown",
     name="pymdown-custom-slugs",
-    py_modules=["pymdown-custom-slugs"],
+    packages=find_packages(exclude=['tools', 'test*']),
     python_requires=">=3.6",
     version="0.0.1",
     url="https://github.com/Stanzilla/pymdown-custom-slugs",
