@@ -17,7 +17,7 @@ setup(
     license="MIT",
     long_description=read("README.md"),
     long_description_content_type="text/markdown",
-    name="pymdown-custom-slugs",
+    name="pymdown_custom_slugs",
     packages=find_packages(exclude=['tools', 'test*']),
     python_requires=">=3.6",
     version="0.0.2",
