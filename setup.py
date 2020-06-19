@@ -18,7 +18,7 @@ setup(
     long_description=read("README.md"),
     long_description_content_type="text/markdown",
     name="pymdown_custom_slugs",
-    packages=custom_slugs.py
+    packages="custom_slugs.py",
     python_requires=">=3.6",
     version="0.0.4",
     url="https://github.com/Stanzilla/pymdown-custom-slugs",
