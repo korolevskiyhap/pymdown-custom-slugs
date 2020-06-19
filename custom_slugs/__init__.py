@@ -68,7 +68,7 @@ def uslugify_encoded(text, sep):
 def uslugify_cased(text, sep):
     """Unicode slugify cased (keep case) (`utf-8`)."""
 
-    return uslugify_custom(text, sep, cased=CASED)
+    return uslugify_custom(text, sep.replace('.', ''), cased=CASED)
 
 
 def uslugify_cased_encoded(text, sep):
