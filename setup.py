@@ -11,7 +11,7 @@ def read(fname):
 setup(
     author="Benjamin Staneck",
     author_email="staneck@gmail.com",
-    description="Custom HTML anchor slogs for Python-Markdown",
+    description="Custom HTML anchor slugs for Python-Markdown",
     install_requires=["Markdown~=3.0"],
     keywords="markdown html anchor slug",
     license="MIT",
@@ -20,7 +20,7 @@ setup(
     name="pymdown_custom_slugs",
     packages=find_packages(exclude=['tools', 'test*']),
     python_requires=">=3.6",
-    version="0.0.7",
+    version="0.1.0",
     url="https://github.com/Stanzilla/pymdown-custom-slugs",
     classifiers=[
         "Programming Language :: Python",

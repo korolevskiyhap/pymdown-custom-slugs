@@ -40,7 +40,7 @@ CASED = 2
 def uslugify_custom(text, sep, cased=NO_CASED, percent_encode=False):
     """Unicode slugify (`utf-8`)."""
 
-    # Normalize, Strip html tags, strip leading and trailing whitespace, and lower
+    # Normalize, strip html tags, strip leading and trailing whitespace, and lower
     slug = RE_TAGS.sub('', unicodedata.normalize('NFC', text)).strip()
 
     if cased == NO_CASED:
@@ -53,8 +53,11 @@ def uslugify_custom(text, sep, cased=NO_CASED, percent_encode=False):
 
         slug = RE_ASCII_LETTERS.sub(lower, slug)
 
-    # Remove non word characters, non spaces, and non dashes, and convert spaces to dashes.
-    slug = RE_SEP.sub(sep, slug.replace('.', ''))
+    # Remove non spaces, and non dashes, and convert spaces to dashes.
+    slug = RE_SEP.sub(sep, slug)
+
+    # Remove dots
+    slug = slug.replace('.', '')
 
     return quote(slug.encode('utf-8')) if percent_encode else slug
 
