@@ -25,6 +25,8 @@ DEALINGS IN THE SOFTWARE.
 """
 import re
 import unicodedata
+import slugify
+from slugify import slugify
 from urllib.parse import quote
 
 RE_TAGS = re.compile(r'</?[^>]*>', re.UNICODE)
@@ -61,6 +63,8 @@ def uslugify_custom(text, sep, cased=NO_CASED, percent_encode=False):
 
     return quote(slug.encode('utf-8')) if percent_encode else slug
 
+def uslugify_awesome(text, sep):
+    return slugify(text)
 
 def uslugify_encoded(text, sep):
     """Unicode slugify (percent encoded)."""
